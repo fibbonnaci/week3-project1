@@ -23,24 +23,91 @@ ADVANCED TRACK: 11-15
 // 1. Define a function called "divideByTwo". It should accept one parameter called "number".
 //    The function should divide the number by two and output the answer.
 
+function divideByTwo(number){
+	var result= number/2;
+	return result;
+}
+
+divideByTwo(4);
+
 // 2. Define a function called "greeting". It should accept two parameters, which will be names.
 //    The function should output the a greeting to both people.
+
+function greeting(name1,name2){
+	console.log("Welcome "+name1+" and "+name2);
+}
+
+greeting("Jyothi","Nidhi");
 
 // 3. You use Amazon Subscribe & Save to have six cans of cashews automatically sent to you each month, but the price keeps changing.
 //    Write a function that takes the price per unit and calculates the total for you each month.
 
+function Price (price){
+	var total= price*6;
+	return total;
+}
+
+Price(3);
+
 // 4. Write a function that accepts the following array and separates the people into two teams.
 //    No names next to eachother in the array should be on the same team.
       teammates = ["Harold", "Bob", "Sue", "Grady", "Notorious B.I.G.", "JavaCrypt", "Weird guy in the back", "Gary", "Carol", "Hipster Tim", "Janet"]
+var team1=[];
+var team2=[];
+function team (list){
+	for(i=0;i< list.length; i++){
+		if (i%2===0){
+			team1.push(list[i]);
+			
+		}else{
+			team2.push(list[i]);
+			
+		}
+	}
+	console.log(team1);
+	console.log(team2);
+}
 
+ var teammates = ["Harold", "Bob", "Sue", "Grady", "Notorious B.I.G.", "JavaCrypt", "Weird guy in the back", "Gary", "Carol", "Hipster Tim", "Janet"];
+ team(teammates);
 // 5. Define a function called "quarter". It accepts one parameter called "number".
 //    The function will return a value which is one quarter of the number provided.
+function quarter(number){
+	var result= number/4;
+	return result;
+} 
+
+quarter(16);
 
 // 6. Define functions called "area" and "perimeter". They should both accept two parameters and calculate the area and perimeter of a rectangle.
+
+function area(len,width){
+	var total= len*width;
+	console.log(total);
+}
+function perimeter(len,width){
+	var peri= 2*(len+width);
+	console.log(peri);
+}
+
+area(4,5);
+
+perimeter(2,3);
 
 // 7. Write a function called "sleepings", it should accept one parameter, an integer called "hours".
 //    Write a conditional statement inside of the function. If the number of hours is more than 8, print a statement to the console about getting enough rest.
 //    If the number of hours is less than 8, print a statement recommending the user get more shut eye.
+function sleepings(hours){
+	if(hours<8){
+		console.log("You need more shut eye");
+	}else if (hours >8){
+		console.log("You are getting enough rest. Now get up and get going!");
+	}else {
+		console.log("This is perfect!");
+	}
+}
+
+sleepings(10);
 
 // 8. Prompt a user to enter a three digit number. Write a function that adds the numbers together.
 //    HINT: You may need to google how to turn a string into an integer.
@@ -52,6 +119,15 @@ ADVANCED TRACK: 11-15
 //     HINT: Googling the toFixed method will help you with the format.
 
 // 10. Develop a function that determines a person's age by prompting them for their birth year.
+function age(year){
+	var d= new Date();
+	var n= d.getFullYear();
+	var diff= n-year;
+	console.log("Your age is: "+ diff);
+}
+
+var current= prompt("What is your birth year?",1987);
+age(current);
 
 
 // ADVANCED TRACK
