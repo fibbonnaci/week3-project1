@@ -113,12 +113,28 @@ sleepings(10);
 //    HINT: You may need to google how to turn a string into an integer.
 //    Note: Strings can be treated as arrays too.
 
+var number=prompt("Please enter a three digit number");
+
+function addDigits(number){
+	var str= number.toString(); //converts number to string
+	var sum=0;
+	for(i=0;i<str.length;i++){
+		var char= parseInt(str.charAt(i),10);
+		sum+=char;
+	}
+	return sum;
+}
+addDigits(number);
+
 // 9. You've finally gotten around to counting the change in your piggy bank. Write a function that accepts four parameters (quarters, dimes, nickels, and pennies).
 //     The function should take each number of coins and multiply it times each coin's value.
 //     Finally, it should return the total amount of change you have in the following format: "$32.77"
 //     HINT: Googling the toFixed method will help you with the format.
 
+
+
 // 10. Develop a function that determines a person's age by prompting them for their birth year.
+
 function age(year){
 	var d= new Date();
 	var n= d.getFullYear();
