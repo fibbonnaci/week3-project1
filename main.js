@@ -164,11 +164,11 @@ function phoneNumber(number){
 	else if(str.length===10){
 		console.log("Good number");
 	}
-	else if(str.length===11 && str.charAt[0]===1){
+	else if(str.length===11 && str.charAt(0)==='1'){
 		console.log(str.slice(1));
 		
 	}
-	else if(str.length===11 && str.charAt[0]!==1){
+	else if(str.length===11 && str.charAt(0) !=='1'){
 		console.log("This is a bad number");
 	}
 	
