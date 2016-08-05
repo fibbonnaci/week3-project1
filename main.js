@@ -154,6 +154,27 @@ age(current);
 //        If the phone number is 11 digits and the first number is 1, trim the 1 and use the last 10 digits
 //        If the phone number is 11 digits and the first number is not 1, then it is a bad number.
 //        HINT: You may need to use the charAt method.
+// error in code
+var d= prompt("Please enter your phone number");
+function phoneNumber(number){
+	var str= number.toString();
+	if(str.length<10||str.length>11){
+		console.log("It is a bad number");
+	}
+	else if(str.length===10){
+		console.log("Good number");
+	}
+	else if(str.length===11 && str.charAt[0]===1){
+		console.log(str.slice(1));
+		
+	}
+	else if(str.length===11 && str.charAt[0]!==1){
+		console.log("This is a bad number");
+	}
+	
+}
+
+phoneNumber(d);
 
 // 12. Create a function that determines whether a parameter is a number or not.
 //     Iterate over the elements in the following array to determine if each is a number.
